@@ -1,0 +1,14 @@
+expectations:
+  - expectation_type: expect_column_values_to_be_unique
+    kwargs:
+      column: CustomerID
+
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: Email
+
+  - expectation_type: expect_column_value_lengths_to_be_between
+    kwargs:
+      column: Phone
+      min_value: 0
+      max_value: 15
