@@ -11,10 +11,10 @@ class ConfigLoader:
         """Carga la configuración de la base de datos según el entorno especificado."""
         if env == "development":
             return DatabaseConfig(
-                server=os.getenv("DEV_DB_SERVER", "localhost"),
-                database=os.getenv("DEV_DB_DATABASE", "MovieRentalDB"),
-                username=os.getenv("DEV_DB_USERNAME", "SA"),
-                password=os.getenv("DEV_DB_PASSWORD", "MyStrongPass123")
+                server=os.getenv("DEV_DB_SERVER", "DBServer"),
+                database=os.getenv("DEV_DB_DATABASE", "DBName"),
+                username=os.getenv("DEV_DB_USERNAME", "User"),
+                password=os.getenv("DEV_DB_PASSWORD", "password")
             )
         elif env == "production":
             return DatabaseConfig(
